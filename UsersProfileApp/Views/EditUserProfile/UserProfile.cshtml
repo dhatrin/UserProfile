@@ -1,0 +1,46 @@
+﻿<div ng-app="userapp">
+    <div ng-controller="UsersCtrl">
+        <div>
+            <table class="table table-hover general-table">
+                <thead class="grid-top-panel">
+                    <tr>
+                        <th style="display:none"></th>
+                        <th>User Name</th>
+                        <th>Hobby</th>
+                        <th>UserPhoto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in usersList">
+                        <td>{{item.UserName}}</td>
+                        <td> {{item.Hobby}}</td>
+                        <td>
+                            <div style="width: 100px; height:100px;    padding-left: 35%;  margin-right: -25px; margin-top:10px">
+                                <a>
+                                    <img class="post-thumbnail" ng-src="data:image/png;base64,{{item.UserPhoto}}" style=" height: 70px;" />
+                                </a>
+                            </div>
+                        </td>
+                        <td style="text-align:right; color:white">
+                            <span>
+                                <span id="save" class="btn btn-danger margin-right-btn"
+                                      ng-click="DeleteUser(item)">
+                                    Delete
+                                </span>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot></tfoot>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/angular-route.min.js"></script>
+<script src="~/Scripts/ng-file-upload-all.js"></script>
+<script src="~/Module/app.js"></script>
+<script src="~/Controllers/UsersCtrl.js"></script>
+<script src="~/Services/ServerRequestSvc.js"></script>
+<script src="~/Services/FileReaderSvc.js"></script>
