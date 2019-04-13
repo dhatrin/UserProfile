@@ -58,7 +58,7 @@
         }
 
         $scope.GetAllUsers = function () {
-            var url = $window.location.href + '/UserProfile';
+            var url = $window.location. + '/UserProfile';
             $window.location = url;
         }
     

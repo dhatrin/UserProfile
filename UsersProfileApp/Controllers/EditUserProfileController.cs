@@ -10,13 +10,11 @@ namespace UsersProfileApp.Controllers
     {
         // GET: EditUserProfile
 
-     
-        public ActionResult ProfileLogin()
+        public ActionResult AddProfile()
         {
             return View();
         }
 
-        [Route("EditUserProfile/ProfileLogin/UserProfile")]
         public ActionResult UserProfile()
         {
             return View();
