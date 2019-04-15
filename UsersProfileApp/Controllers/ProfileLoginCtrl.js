@@ -56,11 +56,6 @@
                 $scope.UserPhoto  = $scope.ImgSrc.split(',')[1];
             });
         }
-
-        $scope.GetAllUsers = function () {
-            var url = $window.location. + '/UserProfile';
-            $window.location = url;
-        }
     
     }
 
